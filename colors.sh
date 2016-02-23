@@ -1,5 +1,6 @@
 #!/bin/dash
 #
+# e.hernandez - 2016
 # choose the important colors, calculate the rest
 
 # theme foreground and background

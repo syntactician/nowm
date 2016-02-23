@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# ez - 2016
+# e.hernandez - 2016
 # set/manage borders on all windows
 
 ACT=$(pfw)

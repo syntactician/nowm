@@ -1,5 +1,6 @@
 #!/bin/sh
 # 
+# e.hernandez
 # implement at least Spectacle functionality under wmutils
 
 ARGS=$@

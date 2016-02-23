@@ -1,4 +1,5 @@
 #!/bin/dash
+# e.hernandez - 2016
 # pulse window border when battery critically low
 
 . ~/.wm/shared.sh

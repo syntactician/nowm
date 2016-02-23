@@ -1,6 +1,6 @@
 #!/bin/dash
 #
-# ez - 2016
+# e.hernandez - 2016
 # first attempt at implementing full-screen windows
 
 PANEL=15

@@ -1,7 +1,10 @@
 #!/bin/dash
+# e.hernandez
 # set or unset border
 
 ARGS="$@"
+
+BW=3
 
 usage() {
 	echo "Usage: $(basename $0) <state> <wid>"
@@ -46,7 +49,7 @@ batteryWarning() {
 }
 
 main() {
-	. ~/.wm/shared.sh
+	. ~/.wm/colors.sh
 
 	test -z $1 && usage 1
 

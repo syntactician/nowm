@@ -1,7 +1,7 @@
 
 #!/bin/dash
 #
-# syntactician - 2016
+# e.hernandez - 2016
 # store a window unmapped for easy access
 
 # depends on focus.sh

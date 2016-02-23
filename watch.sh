@@ -7,10 +7,10 @@
 while IFS=: read ev wid; do
     case $ev in
         # focus new windows
-        19) wattr o $wid || focus.sh $wid ;;
+        19) wattr o $wid || ~/.wm/focus.sh $wid ;;
 
 		# defocus killed windows
-		18) wattr "$(pfw)" || focus.sh prev ;;
+		18) wattr "$(pfw)" || ~/.wm/focus.sh prev ;;
 	
 		# also focus on mouse
 		# 7) wattr o $wid || focus.sh $wid ;;

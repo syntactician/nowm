@@ -1,6 +1,6 @@
 #!/bin/dash
 #
-# ez - 2016
+# e.hernandez - 2016
 # depends on: lemonbar acpi shared.sh
 # usage: bar.sh | lemonbar -p
  

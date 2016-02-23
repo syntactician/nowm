@@ -1,7 +1,7 @@
 
 #!/bin/dash
 #
-# syntactician - 2016
+# e.hernandez - 2016
 # depends on: acpi
 
 # set borders

@@ -1,5 +1,6 @@
 #!/bin/dash
 
+# e.hernandez
 # a new focus wrapper based on Wildfyre, not z3bra
 
 ARGS="$@"
@@ -32,8 +33,10 @@ focusPrev() {
 }
 
 focusMethod() {
+	for n in $(lsw | grep -v $wid); do
+		~/.wm/setborder.sh inactive $n
+	done
 	chwso -r $wid
-	~/.wm/setborder.sh inactive $(pfw)
 	wtf $wid
 	~/.wm/setborder.sh active $(pfw)
 }
