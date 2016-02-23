@@ -1,1 +1,1 @@
-# `nowm` /noum/
+# `nowm` /noʊm/
