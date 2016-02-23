@@ -62,16 +62,24 @@ snapNW() {
 	wtp $GAP $((GAP + PANEL)) $HW $HH $WID
 }
 
+snapCenter() {
+	WW=$(wattr w $WID)
+	WH=$(wattr h $WID)
+
+	wtp $((SW/2 - WW/2 - BW)) $((SH/2 + PANEL - WH/2 - BW)) $WW $WH $WID
+}
+
 main() {
 	case $1 in
-		h|west|left)     snapWest  ;;
-		j|south|down)    snapSouth ;;
-		k|north|up)      snapNorth ;;
-		l|east|right)    snapEast  ;;
-		tr|ne|northeast) snapNE    ;;
-		br|se|southeast) snapSE    ;;
-		bl|sw|southwest) snapSW    ;;
-		tl|nw|northwest) snapNW    ;;
+		h|west|left)     snapWest   ;;
+		j|south|down)    snapSouth  ;;
+		k|north|up)      snapNorth  ;;
+		l|east|right)    snapEast   ;;
+		tr|ne|northeast) snapNE     ;;
+		br|se|southeast) snapSE     ;;
+		bl|sw|southwest) snapSW     ;;
+		tl|nw|northwest) snapNW     ;;
+		center)          snapCenter ;;
 		*)
 	esac
 }
