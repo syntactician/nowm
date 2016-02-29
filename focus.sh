@@ -7,11 +7,10 @@ ARGS="$@"
 
 usage() {
 	cat << EOF
-Usage: $(basename $0) <next|prev|full|wid>
+Usage: $(basename $0) <next|prev|wid>
 	wid:  Focus the given window id.
 	next: Focus the next window on the stack.
 	prev: Focus the previous window on the stack.
-	full: Focus the fullscreen window.
 EOF
 
 	test -z $1 || exit $1
