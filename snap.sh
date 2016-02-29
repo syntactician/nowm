@@ -81,7 +81,7 @@ main() {
 		bl|sw|southwest) snapSW     ;;
 		tl|nw|northwest) snapNW     ;;
 		center)          snapCenter ;;
-		*)
+		*)               usage      ;;
 	esac
 }
 
