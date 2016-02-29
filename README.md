@@ -6,4 +6,4 @@ sh and [`wmutils`](https://wmutils.io).
 ### Known bugs
 
 * `wmp` does not move the mouse pointer.
-	* neither does [`swarp`](https://tools.suckless.org/x/swarp).
+	* neither does [`swarp`](http://tools.suckless.org/x/swarp).
