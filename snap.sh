@@ -67,10 +67,10 @@ snapNW() {
 
 snapCenter() {
 	wtp $((SW/2 - WW/2 - BW))         \
-		$((SH/2 + PANEL - WH/2 - BW)) \
-		$(wattr w $1)                 \
-		$(wattr h $1)                 \
-		$1
+	    $((SH/2 + PANEL - WH/2 - BW)) \
+	    $(wattr w $1)                 \
+	    $(wattr h $1)                 \
+	    $1
 }
 
 fullscreen() {
