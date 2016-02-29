@@ -9,10 +9,10 @@
 SCFILE=/tmp/nowm/scratch
 
 if [ -f $SCFILE ] ; then
-	wid=$(< $SCFILE)
-	chwso -r $wid
-	mapw -m $wid
-	focus.sh $wid
+	WID=$(< $SCFILE)
+	chwso -r $WID
+	mapw -m $WID
+	focus.sh $WID
 	rm -f $SCFILE
 else
 	WID=$(pfw | tee $SCFILE)
