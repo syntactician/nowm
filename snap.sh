@@ -4,29 +4,7 @@
 # implement at least Spectacle functionality under wmutils
 
 ARGS=$@
-
-PANEL=15
-GAP=25
-
 FSFILE=/tmp/nowm/full
-
-WID=$2
-DWW=$(wattr b $WID)
-
-ROOT=$(lsw -r)
-SW=$(wattr w $ROOT)
-SH=$(wattr h $ROOT)
-
-SH=$((SH - PANEL))
-
-WW=$((SW - 2*BW - 2*GAP))
-WH=$((SH - 2*BW - 2*GAP))
-
-HW=$((SW/2 - GAP - GAP/2 - 2*BW))
-HH=$((SH/2 - GAP - GAP/2 - 2*BW))
-
-HX=$((SW/2 + GAP/2))
-HY=$((SH/2 + GAP/2 + PANEL))
 
 usage() {
 	echo "usage: $(basename $0) <direction> <wid>" >&2
@@ -98,6 +76,8 @@ snapFull() {
 }
 
 main() {
+	. ~/.wm/dimensions.sh
+	
 	case $1 in
 		h|west|left)     snapWest   $2 ;;
 		j|south|down)    snapSouth  $2 ;;
