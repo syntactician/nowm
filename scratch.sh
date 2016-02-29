@@ -1,22 +1,20 @@
 
 #!/bin/dash
-#
-# e.hernandez - 2016
-# store a window unmapped for easy access
-
+# e.hernandez
+# 
+# store a single window unmapped but accessible
 # depends on focus.sh
-# optionally depends on focus.sh
+# /tmp/nowm/ must exist for this script to behave properly
 
-if [ -f .sw ] ; then
-	wid=$(<~/.wm/.sw)
+SCFILE=/tmp/nowm/scratch
+
+if [ -f $SCFILE ] ; then
+	wid=$(< $SCFILE)
 	chwso -r $wid
 	mapw -m $wid
-	./focus.sh $wid
-	rm -f .sw
+	focus.sh $wid
+	rm -f $SCFILE
 else
-	wid=$(pfw)
-	wattr i $wid >~/.wm/.sw
-	mapw -u $wid
-	sleep 1
-	./focus.sh next
+	WID=$(pfw | tee $SCFILE)
+	mapw -u $WID
 fi
