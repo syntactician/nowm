@@ -1,0 +1,47 @@
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + Return
+	st
+
+super + !button1
+	wmv -a %i %i $(pfw)
+
+super + {h, j, k, l}
+	~/.wm/snap.sh {west, south, north, east} $(pfw)
+
+super + f
+	~/.wm/snap.sh full $(pfw)
+
+super + shift + {h, l, c}
+	~/.wm/snap.sh {northwest, northeast, center} $(pfw)
+
+super + alt + {h, l}
+	~/.wm/snap.sh {southwest, southeast}
+
+super + {Tab, grave}
+	~/.wm/focus.sh {next, prev}
+
+super + space
+	dmenu_run -nb '#2b303b' -sb '#2b303b' -nf '#a7adba' -sf '#bf616a'
+
+super + shift + e
+	pkill xinit
+
+super + c
+	killw $(pfw)
+
+super + shift + f
+	firefox
+
+super + shift + return
+	xterm
+
+super + s
+	~/.wm/scratch.sh
+
+super + p
+	spt -n 'notify-send'
+
+super + shift + Escape
+	slock
