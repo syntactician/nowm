@@ -1,19 +1,33 @@
 #!/bin/sh
 # e.hernandez
 # 
-# store a single window unmapped but accessible
+# stows current window unmapped OR retrieves stowed  window
+#
 # depends on focus.sh
 # /tmp/nowm/ must exist for this script to behave properly
 
 SCFILE=/tmp/nowm/scratch
 
-if [ -f $SCFILE ] ; then
+stow(){
+	WID=$(echo "$1" | tee $SCFILE)
+	mapw -u $WID
+}
+
+retrieve(){
 	WID=$(< $SCFILE)
 	chwso -r $WID
 	mapw -m $WID
 	focus.sh $WID
 	rm -f $SCFILE
-else
-	WID=$(pfw | tee $SCFILE)
-	mapw -u $WID
-fi
+}
+
+main(){
+	if [ -f $SCFILE ] ; then
+		retrieve
+	else
+		stow $(pfw)
+	fi
+}
+
+
+main
