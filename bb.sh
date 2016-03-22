@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 # e.hernandez - 2016
 # pulse window border when battery critically low
 

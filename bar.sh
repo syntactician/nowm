@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 #
 # e.hernandez - 2016
 # depends on: lemonbar acpi shared.sh

@@ -1,5 +1,4 @@
-
-#!/bin/dash
+#!/bin/sh
 # e.hernandez
 # stores the size of gaps, borders, etc
 

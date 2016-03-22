@@ -1,5 +1,4 @@
-
-#!/bin/dash
+#!/bin/sh
 #
 # e.hernandez - 2016
 # depends on: acpi

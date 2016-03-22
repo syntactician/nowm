@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 #
 # e.hernandez - 2016
 # choose the important colors, calculate the rest

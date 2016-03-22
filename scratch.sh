@@ -1,5 +1,4 @@
-
-#!/bin/dash
+#!/bin/sh
 # e.hernandez
 # 
 # store a single window unmapped but accessible

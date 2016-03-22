@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 
 # e.hernandez
 # a new focus wrapper based on Wildfyre, not z3bra

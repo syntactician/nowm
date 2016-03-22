@@ -1,4 +1,4 @@
-#!/bin/dash
+#!/bin/sh
 # e.hernandez
 # set or unset border
 
