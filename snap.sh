@@ -12,23 +12,23 @@ usage() {
 }
 
 snapNorth() {
-	wtp $GAP $((GAP + PANEL)) $WW $HH $1
+	wtp $FX $FY $FW $HH $1
 }
 
 snapEast() {
-	wtp $HX $((GAP + PANEL)) $HW $WH $1
+	wtp $HX $FY $HW $FH $1
 }
 
 snapSouth() {
-	wtp $GAP $HY $WW $HH $1
+	wtp $FX $HY $FW $HH $1
 }
 
 snapWest() {
-	wtp $GAP $((GAP + PANEL)) $HW $WH $1
+	wtp $FX $FY $HW $FH $1
 }
 
 snapNE() {
-	wtp $HX $((GAP + PANEL)) $HW $HH $1
+	wtp $HX $FY $HW $HH $1
 }
 
 snapSE() {
@@ -36,24 +36,27 @@ snapSE() {
 }
 
 snapSW() {
-	wtp $GAP $HY $HW $HH $1
+	wtp $FX $HY $HW $HH $1
 }
 
 snapNW() {
-	wtp $GAP $((GAP + PANEL)) $HW $HH $1
+	wtp $FX $FY $HW $HH $1
 }
 
 snapCenter() {
-	wtp $((SW/2 - WW/2 - BW))         \
-	    $((SH/2 + PANEL - WH/2 - BW)) \
-	    $(wattr w $1)                 \
-	    $(wattr h $1)                 \
-	    $1
+	CW=$(wattr w $1)
+	CH=$(wattr h $1)
+
+	wtp $((SW/2 - CW/2 - BW))         \
+		$((SH/2 - CH/2 - BW + PANEL)) \
+		$CW                           \
+		$CH                           \
+		$1
 }
 
 fullscreen() {
 	wattr xywhi $1 > $FSFILE
-	wtp $GAP $((GAP + PANEL)) $WW $WH $1
+	wtp $FX $FY $FW $FH $1
 }
 
 restorefull() {

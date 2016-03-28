@@ -15,8 +15,8 @@ SH=$(wattr h $ROOT)
 SW=$(wattr w $ROOT)
 
 # usable height and width
-WH=$((SH - 2*BW - 2*GAP - PANEL))
-WW=$((SW - 2*BW - 2*GAP))
+FH=$((SH - 2*BW - 2*GAP - PANEL))
+FW=$((SW - 2*BW - 2*GAP))
 
 # height and width of half-screen windows
 HH=$((SH/2 - GAP - GAP/2 - 2*BW))
