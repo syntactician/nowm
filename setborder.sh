@@ -59,9 +59,9 @@ main() {
 			active)   chwb -s $BW -c $FG   $2 ;;
 			inactive) chwb -s $BW -c $BG   $2 ;;
 			warning)  chwb -s $BW -c $WARN $2 ;;
-			pulse)    pulse $2                ;;
-			battery)  batteryWarning $2       ;;
-			*)        usage 0 ;;
+			pulse)    pulse                $2 ;;
+			battery)  batteryWarning       $2 ;;
+			*)        usage 0                 ;;
 		esac
 	} || {
 		echo "You have not entered a window id." >&2
