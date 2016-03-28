@@ -7,19 +7,19 @@
 BW=3
 
 # theme foreground and background
-FG=a7adba
-BG=2b303b
+FG=d0d0d0
+BG=3a3a3a
 # warning color
-WARN=ebcb8b
+WARN=ffd787
 
 # midpoints between foreground and red
 # to correspond to battery level
-bc0=bf616a
-bc1=b9747e
-bc2=b38792
-bc3=ad9aa6
-bc4=a7adba
-bc5=a7adba
+b0=d75f87
+b1=d67686
+b2=d48ca4
+b3=d3a3b3
+b4=d1b9c1
+b5=d0d0d0
 
 battery() {
 	acpi --battery | cut -d, -f2 | tr -d '%'
